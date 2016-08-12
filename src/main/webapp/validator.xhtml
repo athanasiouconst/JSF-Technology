@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>JSF Tutorial!</title>
+    </head>
+    <body>
+<h2>h:validateLength Example</h2>
+   <h:form>
+      <h:inputText id="nameInput" value="#{validatorData.name}" 
+         label="name" >
+         <f:validateLength minimum="5" maximum="8" />
+      </h:inputText>			
+      <h:commandButton value="submit" action="resultUser"/>
+      <h:message for="nameInput" style="color:red" />
+      
+      <h:inputSecret id="passwordInput" value="#{userData.password}" 
+         label="password" >
+         <f:validateRegex pattern="((?=.*[a-z]).{6,})" />
+      </h:inputSecret>			
+      <h:commandButton value="submit" action="result"/>
+      <h:message for="passwordInput" style="color:red" />
+      
+      
+      <h:inputText id="ageInput" value="#{validatorData.age}" 
+         label="age" >
+         <f:validateLongRange minimum="5" maximum="200" />
+      </h:inputText>			
+      <h:commandButton value="submit" action="result"/>
+      <h:message for="ageInput" style="color:red" />
+      <h:inputText id="salaryInput" value="#{validatorData.salary}" 
+         label="salary" >
+         <f:validateDoubleRange minimum="1000.50" maximum="10000.50" />
+      </h:inputText>			
+      <h:commandButton value="submit" action="result"/>
+      <h:message for="salaryInput" style="color:red" />
+   </h:form>         
+    </body>
+</html>

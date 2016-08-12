@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>JSF Tutorial!</title>
+    </head>
+    <body>
+        
+        <h2>h:selectBooleanCheckbox example</h2>
+        <hr />
+        <h:form id="jsfForm1">
+            <h3>Get value from selectBooleanCheckbox field</h3>
+            <h:selectBooleanCheckbox value="Remember Me" id="chkRememberMe" />
+            <h:commandButton value="Show Checked" onclick="showCheckedValue()" />
+        </h:form> 
+
+
+
+        <h2>h:selectManyCheckbox example</h2>
+        <hr />
+        <h:form>
+            <h3>Radio Button</h3> 
+            <h:selectOneRadio value="#{userDataSelectItem.data}">
+                <f:selectItem itemValue="1" itemLabel="Item 1" />
+                <f:selectItem itemValue="2" itemLabel="Item 2" />
+                <f:selectItem itemValue="3" itemLabel="Item 3" />
+                <f:selectItem itemValue="4" itemLabel="Item 4" />
+                <f:selectItem itemValue="5" itemLabel="Item 5" />
+            </h:selectOneRadio>	   		
+            <h:commandButton value="Submit" action="result" />
+        </h:form> 
+
+
+        <h2>h::selectOneListbox example</h2>
+        <hr />
+        <h:form>
+            <h3>List Box</h3> 
+            <h:selectOneListbox value="#{userDataListbox.data}">
+                <f:selectItem itemValue="1" itemLabel="Item 1" />
+                <f:selectItem itemValue="2" itemLabel="Item 2" />
+                <f:selectItem itemValue="3" itemLabel="Item 3" />
+                <f:selectItem itemValue="4" itemLabel="Item 4" />
+                <f:selectItem itemValue="5" itemLabel="Item 5" />				
+            </h:selectOneListbox>	
+            <h:commandButton value="Submit" action="result" />
+        </h:form> 
+
+        <h2>h:selectManyListbox example</h2>
+        <hr />
+        <h:form>
+            <h3>List Box</h3> 
+            <h:selectManyListbox value="#{userDataManyListbox.data}">
+                <f:selectItem itemValue="1" itemLabel="Item 1" />
+                <f:selectItem itemValue="2" itemLabel="Item 2" />
+                <f:selectItem itemValue="3" itemLabel="Item 3" />
+                <f:selectItem itemValue="4" itemLabel="Item 4" />
+                <f:selectItem itemValue="5" itemLabel="Item 5" />
+            </h:selectManyListbox>
+            <h:commandButton value="Submit" action="result" />
+        </h:form> 
+
+        <h2>h::selectOneMenu example</h2>
+        <hr />
+        <h:form>
+            <h3>Combo Box</h3> 
+            <h:selectOneMenu value="#{userDataOneMenu.data}">
+                <f:selectItem itemValue="1" itemLabel="Item 1" />
+                <f:selectItem itemValue="2" itemLabel="Item 2" />
+                <f:selectItem itemValue="3" itemLabel="Item 3" />
+                <f:selectItem itemValue="4" itemLabel="Item 4" />
+                <f:selectItem itemValue="5" itemLabel="Item 5" />				
+            </h:selectOneMenu>	
+            <h:commandButton value="Submit" action="result" />
+        </h:form> 
+
+        <h2>h:outputText example</h2>
+        <hr />
+        <h:form>
+            <h3>Text</h3>
+            <h:outputText value="Hello World"/>
+        </h:form>
+        <h2>h:outputFormat example</h2>
+        <hr />
+        <h:form>
+            <h3>Text</h3>
+            <h:outputFormat value="parameter 1 : {0}, parameter 2 : {1}" >
+                <f:param value="Item 1" />
+                <f:param value="Item 2" />
+            </h:outputFormat>	
+        </h:form>
+        <h2>h:graphicImage example</h2>
+        <hr />
+        <h:form>      
+            <h3>Image</h3>
+            <h:graphicImage value="/images/jsf-mini-logo.png"/>
+        </h:form>
+
+
+    </body>
+</html>

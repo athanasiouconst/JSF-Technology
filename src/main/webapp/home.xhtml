@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>JSF Tutorial!</title>
+    </head>
+    <body>
+        <h2>Tables example</h2>
+        <hr />
+        <h:form>
+            <h:outputLink value="faces/dataTables.xhtml" >dataTables Examples</h:outputLink>
+        </h:form>
+
+        <h2>Validators example</h2>
+        <hr />
+        <h:form>
+            <h:outputLink value="faces/validator.xhtml" >validator Examples</h:outputLink>
+        </h:form>
+
+        <h2>Convertors example</h2>
+        <hr />
+        <h:form>
+            <h:outputLink value="faces/convertors.xhtml" >convertors Examples</h:outputLink>
+        </h:form>
+        <h2>h:outputLink example</h2>
+        <hr />
+        <h:form>
+            <h:outputLink value="faces/grid.xhtml" >Grid Examples</h:outputLink>
+        </h:form>
+
+        <h2>h:outputLink example</h2>
+        <hr />
+        <h:form>
+            <h:outputLink value="home1.xhtml" >Page 1</h:outputLink>
+        </h:form>
+
+        <h2>h:inputText example</h2>
+        <hr />
+        <h:form>
+            <h3>Read-Only input text box</h3>
+            <h:inputText value="Hello World!" readonly="true"/>
+            <h3>Read-Only input text box</h3>
+            <h:inputText value="Hello World"/>
+        </h:form>
+
+
+        <h2>h:inputSecret example</h2>
+        <hr />
+        <h:form>
+            <h3>Read-Only input password box</h3>
+            <h:inputSecret value="password" readonly="true"/>
+            <h3>Read-Only input text box</h3>
+            <h:inputText value="password"/>
+        </h:form>
+
+        <!--   
+           <h2>h:inputTextArea example</h2>
+           <hr />
+           <h:form>
+              <h3>Read-Only input text area</h3>
+              <h:inputTextarea rows="10" cols="10" value="Hello World! 
+                 <br/> Everything is fine!" readonly="true" />
+              <h3>Normal input text area</h3>
+              <h:inputTextarea value="Hello World! <br/> Everything is fine!" />
+           </h:form>
+        -->
+        <h:head>
+            <script type="text/javascript">
+                function showHiddenValue() {
+                    alert(document.getElementById('jsfForm:hiddenField').value);
+                }
+            </script>
+        </h:head>
+        <h2>h:inputHidden example</h2>
+        <hr />
+        <h:form id="jsfForm">
+            <h3>Get value from inputHidden field</h3>
+            <h:inputHidden value="Hello World" id="hiddenField" />
+            <h:commandButton value="Show Hidden Value" onclick="showHiddenValue()" />
+        </h:form>
+        <h:head>
+            <script type="text/javascript">
+                function showCheckedValue() {
+                    alert(document.getElementById('jsfForm1:chkRememberMe').checked);
+                }
+            </script>
+        </h:head>
+        <h2>h:selectBooleanCheckbox example</h2>
+        <hr />
+        <h:form id="jsfForm1">
+            <h3>Get value from selectBooleanCheckbox field</h3>
+            <h:selectBooleanCheckbox value="Remember Me" id="chkRememberMe" />
+            <h:commandButton value="Show Checked" onclick="showCheckedValue()" />
+        </h:form> 
+
+
+
+        <h2>h:selectManyCheckbox example</h2>
+        <hr />
+        <h:form>
+            <h3>Radio Button</h3> 
+            <h:selectOneRadio value="#{userDataSelectItem.data}">
+                <f:selectItem itemValue="1" itemLabel="Item 1" />
+                <f:selectItem itemValue="2" itemLabel="Item 2" />
+                <f:selectItem itemValue="3" itemLabel="Item 3" />
+                <f:selectItem itemValue="4" itemLabel="Item 4" />
+                <f:selectItem itemValue="5" itemLabel="Item 5" />
+            </h:selectOneRadio>	   		
+            <h:commandButton value="Submit" action="result" />
+        </h:form> 
+
+
+        <h2>h::selectOneListbox example</h2>
+        <hr />
+        <h:form>
+            <h3>List Box</h3> 
+            <h:selectOneListbox value="#{userDataListbox.data}">
+                <f:selectItem itemValue="1" itemLabel="Item 1" />
+                <f:selectItem itemValue="2" itemLabel="Item 2" />
+                <f:selectItem itemValue="3" itemLabel="Item 3" />
+                <f:selectItem itemValue="4" itemLabel="Item 4" />
+                <f:selectItem itemValue="5" itemLabel="Item 5" />				
+            </h:selectOneListbox>	
+            <h:commandButton value="Submit" action="result" />
+        </h:form> 
+
+        <h2>h:selectManyListbox example</h2>
+        <hr />
+        <h:form>
+            <h3>List Box</h3> 
+            <h:selectManyListbox value="#{userDataManyListbox.data}">
+                <f:selectItem itemValue="1" itemLabel="Item 1" />
+                <f:selectItem itemValue="2" itemLabel="Item 2" />
+                <f:selectItem itemValue="3" itemLabel="Item 3" />
+                <f:selectItem itemValue="4" itemLabel="Item 4" />
+                <f:selectItem itemValue="5" itemLabel="Item 5" />
+            </h:selectManyListbox>
+            <h:commandButton value="Submit" action="result" />
+        </h:form> 
+
+        <h2>h::selectOneMenu example</h2>
+        <hr />
+        <h:form>
+            <h3>Combo Box</h3> 
+            <h:selectOneMenu value="#{userDataOneMenu.data}">
+                <f:selectItem itemValue="1" itemLabel="Item 1" />
+                <f:selectItem itemValue="2" itemLabel="Item 2" />
+                <f:selectItem itemValue="3" itemLabel="Item 3" />
+                <f:selectItem itemValue="4" itemLabel="Item 4" />
+                <f:selectItem itemValue="5" itemLabel="Item 5" />				
+            </h:selectOneMenu>	
+            <h:commandButton value="Submit" action="result" />
+        </h:form> 
+
+        <h2>h:outputText example</h2>
+        <hr />
+        <h:form>
+            <h3>Text</h3>
+            <h:outputText value="Hello World"/>
+        </h:form>
+        <h2>h:outputFormat example</h2>
+        <hr />
+        <h:form>
+            <h3>Text</h3>
+            <h:outputFormat value="parameter 1 : {0}, parameter 2 : {1}" >
+                <f:param value="Item 1" />
+                <f:param value="Item 2" />
+            </h:outputFormat>	
+        </h:form>
+        <h2>h:graphicImage example</h2>
+        <hr />
+        <h:form>      
+            <h3>Image</h3>
+            <h:graphicImage value="/images/jsf-mini-logo.png"/>
+        </h:form>
+
+        <h2>h:commandButton example</h2>
+        <hr />
+        <h:form>
+            <h:commandButton value="Click Me!" onclick="alert('Hello World!');" />
+        </h:form>
+
+        <h2>h:Link example</h2>
+        <hr />
+        <h:form>
+            <h:link value="Page 1" outcome="LinkController" />
+        </h:form>
+
+        <h2>h:commandLink example</h2>
+        <hr />
+        <h:form>
+            <h:commandLink value="Page 1" action="LinkController" />
+        </h:form>
+        <h2>h:messages example</h2>
+        
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>JSF Tutorial!</title>
+    </head>
+    <body>
+
+        <h2>DataTable Example</h2>
+        <h:form>
+            <h:dataTable value="#{dataTables.employees}" var="employee"
+                         styleClass="employeeTable"
+                         headerClass="employeeTableHeader"
+                         rowClasses="employeeTableOddRow,employeeTableEvenRow">
+                <h:column>    				
+                    <f:facet name="header">Name</f:facet>    				
+                        #{employee.name}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Department</f:facet>
+                        #{employee.department}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Age</f:facet>
+                        #{employee.age}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Salary</f:facet>
+                        #{employee.salary}
+                </h:column>
+            </h:dataTable>
+
+
+            <h3>Add Employee</h3>
+            <hr/>
+            <table>
+                <tr>
+                    <td>Name :</td>
+                    <td><h:inputText size="10" value="#{dataTables.name}" /></td>
+                </tr>
+                <tr>
+                    <td>Department :</td>
+                    <td><h:inputText size="20" value="#{dataTables.department}" /></td>
+                </tr>
+                <tr>
+                    <td>Age :</td>
+                    <td><h:inputText size="5" value="#{dataTables.age}" /></td>
+                </tr>
+                <tr>
+                    <td>Salary :</td>
+                    <td><h:inputText size="5" value="#{dataTables.salary}" /></td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td><h:commandButton value="Add Employee" 
+                                         action="#{dataTables.addEmployee}" /></td>
+                </tr>
+            </table>
+        </h:form>
+    </body>
+</html>
