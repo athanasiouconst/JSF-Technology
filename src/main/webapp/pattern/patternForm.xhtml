@@ -13,16 +13,16 @@
 
 		<h:panelGrid columns="3">
 
-		  Enter your email :
+		  Enter your text_Pattern :
 
-		  <h:inputText id="email" value="#{userPatternVallidator.email}"
-			size="20" required="true" label="Email Address">
+		  <h:inputText id="text_Pattern" value="#{userPatternVallidator.text_Pattern}"
+			size="20" required="true" label="text_Pattern">
 
-			<f:validator validatorId="controller.EmailValidator" />
+			<f:validator validatorId="controller.TextPatternValidator" />
 
 		  </h:inputText>
 
-		  <h:message for="email" style="color:red" />
+		  <h:message for="text_Pattern" style="color:red" />
 
 		</h:panelGrid>
 
